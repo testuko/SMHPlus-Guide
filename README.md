@@ -15,30 +15,35 @@ Features
 **For Players**:
 ![menu](docs/img/menu.png)
 
-choose player skin and collectible etc skins at any time in the game, without restarting, 
-Allows you to personalize combination them
+Allows you to change the player skin or any other supported skin at any time, ingame, without restarting.
+You can individually choose and combine textures from any supported skinmod.
 
-
+<br>
  
 **For Skin Modders**:
 
-Reskin the game! Solve the hard coding in game programs and provide their reskin solutions. such as:
-```yaml
-* Provided bangs, for player and badeline etc.  
-* Provided death particles, for player and TheoCrystal etc.  
-* Provided new particles and outline, for flyFeathers and Boosters.  
-* Provided Refill's reskin compatibility, for maps or skins
-* Or more, As long as you needed! 
-```
-for complete content of reskinable, [check here](https://github.com/AAA1459/SkinModHelper/wiki/Textures-list-of-Various-Type)
+Reskin the game! No need to get frustrated with hardcoded assets. SMH+ adds support for:
 
-Setting up your skin mod correctly requires some configuration. 
-See the [guide](docs/guide/README.md) for more information.
+```yaml
+* Separate hair and bang textures for both player and badeline etc.
+* Custom hair length, color and texture customization.
+* Custom death particle for player and Theo crystal etc.  
+* Custom particles for feathers and boosters.
+* Compatibility for dash refill skinning.
+* New features if you as you ask!
+* And a lot more.
+```
+
+A complete list of reskinnable textures can be found [**here**](https://github.com/AAA1459/SkinModHelper/wiki/Textures-list-of-Various-Type).
+
+
+Making your skinmod compatible takes a few small steps.
+See the [**guide**](docs/guide/README.md) for more information.
 
 
 Contact
 -------
-If you encounter any issues or have suggestions in this fork, you can reach me on Discord (AAA1459#7937)
+If you encounter any issues or have suggestions for this fork, reach out to me on Discord (AAA1459)
 
 
 Credits
