@@ -1,18 +1,20 @@
 
 Skin Mod Helper Guide
 ======================
-This guide will walk you through making your skin mod compatible with Skin Mod Helper.
+This guide will walk you through making your skinmod compatible with Skin Mod Helper Plus.
 
 A brief introduction to config files
 ------------------------------------
-Config files can help the Skin Mod Helper find information about your skin mod.
-If your mod provides a skin, then you need to create a file named "SkinModHelperConfig.yaml" in your mod root (next to your everest.yaml).
+
+Config files give SMH+ information about your skinmod.
+You need to create a file named "SkinModHelperConfig.yaml" in your mod root (next to your everest.yaml).
+
 
 Here is a skeleton of a SkinModHelperConfig.yaml file.
 Each of the fields will be explained below.
 
 ```yaml
-- SkinName: [an SkinName that is required]
+- SkinName: [A SkinName that is required]
 
   # ---Player skin---
   Player_List: [true/false]
