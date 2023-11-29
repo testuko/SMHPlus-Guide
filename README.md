@@ -34,7 +34,7 @@ Reskin the game! No need to get frustrated with hardcoded assets. SMH+ adds supp
 * And a lot more.
 ```
 
-A complete list of reskinnable textures can be found [**here**](https://github.com/AAA1459/SkinModHelper/wiki/Textures-list-of-Various-Type).
+A list of reskinnable textures can be found [**here**](https://github.com/AAA1459/SkinModHelper/wiki/Textures-list-of-Various-Type).
 
 
 Making your skinmod compatible takes a few small steps.
