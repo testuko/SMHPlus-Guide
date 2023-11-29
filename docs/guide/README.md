@@ -29,28 +29,100 @@ Each of the fields will be explained below.
   General_List: [true/false]
   OtherSprite_ExPath: [a path]
 ```
+<br>
+
 
 
 SkinName
 -----------------------------------
-In the config file, we first need to write this information:
+This is the name of your skin that will appear in Mod Options. Remember to clean the name using language files.
+```yaml
+- SkinName: "Example Skin"    # required
 ```
-- SkinName: [Set a base option for your skin]     # required
+<br>
+
+
+
+Character_ID
+---------------------------
+
+A player skin needs a unique character ID.
+
+```yaml
+  Character_ID: "MySkin"
 ```
 
-`Character_ID`
----------------------------
-If your skin type is "Player Skin",
-Then, you need to set a PlayerSkin ID for the SkinName information you wrote, use this to do it:
+This is the ID that you modify in the sprites.xml instead of the normal  `<player>`
+
+```xml
+  <!-- sprites.xml -->
+
+<?xml version="1.0" encoding="utf-8" ?>
+<Sprites>
+  <MySkin copy="player" path="characters/MySkin1/" />
+</Sprites>
 ```
-  Character_ID: [your new PlayerID]
+<br>
+
+
+
+Conditional Player Sprites
+-----------------------------------
+You can add additional Character_IDs for your skin that change your skin when specific conditions are met.<br>
+If a texture is missing from a conditional player skin, it is filled in from the default player skin.
+
+
+* "[SkinName] + _NB" 
+   * condition: When the player is in no_backpack state
+<br><br>
+* "[SkinName] + _lantern"
+   * If you want reskin some Player ID from JungleHelper, then you can use this special jump
+   * condition: Player holds the lantern from JungleHelper
+<br><br>
+* "[SkinName] + _lantern_NB"
+   * conditions: Player holds the lantern from JungleHelper and is in no_backpack state
+<br><br>
+
+
+```yaml
+# SkinModHelperConfig.yaml
+
+# ---Default Player skin---
+- SkinName: "Example Skin"
+  Player_List: true
+  Silhouette_List: false
+  Character_ID: "MySkin"
+
+
+# ---Player skin without a backpack---
+- SkinName: "Example Skin_NB"
+  Character_ID: MySkin_No_Backpack
+
+
+# ---Player skin holding a lantern---
+- SkinName: "Example Skin_lantern"
+  Character_ID: MySkin_Lantern
 ```
+```xml
+  <!-- sprites.xml -->
+
+<?xml version="1.0" encoding="utf-8" ?>
+<Sprites>
+  <MySkin copy="player" path="characters/MySkin1/" />
+  <MySkin_No_Backpack copy="player_no_backpack" path="characters/MySkin1_NB/" />
+  <MySkin_Lantern copy="player" path="characters/MySkin1_Lantern/" />
+</Sprites>
+```
+
+<br>
+
+
 
 OtherSprite / Some thing about skin's Xml
 -----------------------------------
 Skin will need you to have an Xml file, 
 Now let we first set root directory for those Xml, or called them is skin's xml.
-```
+```yaml
 # The starting point of below path: "Graphics/"
   OtherSprite_Path: [Root directory path]     # for paleyr skin
   OtherSprite_ExPath: [Root directory path]     # for general skin
@@ -70,54 +142,35 @@ After viewing, we need to do those:
    
 now you have finished them, Let's check out the other parts.
 
+<br>
 
-let your skin appear in Mod-Options
+
+
+Make your skin appear in Mod Options
 -----------------------------------
 If your skin type is "Player Skin", Then We need to use some more content to let it get there:
-```
+```yaml
   Player_List: true    # Affects the "Player Skin" option
   Silhouette_List: true    # Affects the "Silhouette Skin" option
 ```
 If your skin type is "General Skin", Then when you set "[OtherSprite_ExPath]" after, them will appear in "General Skin" list.
 Or use this to prevent it get there:
-```
+```yaml
   General_List: false
 ```
+<br>
 
-hashSeed
+
+
+HashSeed
 -----------------------------------
-We should have mentioned that the SkinModHelper will make your player skin compatible with CelesteNet.
-SkinModHelper use a "hashSeed" to do it, that "hashSeed" defaults is "[SkinName]"
 
-If your skin happens to conflict with other skins when compatible with CelesteNet, 
-Then you can use this to change and fix it.
-```
+SkinModHelper skins are CelesteNet compatible. The hashSeed is a unique value that is used to identify your skin. If not included, it defaults to "[SkinName]", but can be overwritten if it conflicts with another skinmod.
+
+```yaml
   hashSeed: [any]
 ```
-
-You can write multiple skin info to your config file, 
-this just need repeats everything above steps.
-
-
-
-Special Jump of Player skin
------------------------------------
-If there are some special names close to that player skin in the config file, and you meet some conditions.
-Then SkinModHelper will try to do a special jump.
-
-The purpose of Those Special Jump are, 
-for let player(maddy) looks different in the same entity. such as "payphone" ID of Sprites.xml.
-
-We will introduce those special jumps and their jump conditions:
-* "[SkinName] + _NB" 
-   * conditions: When the player is no_backpack state
-* "[SkinName] + _lantern"
-   * If you want reskin some Player ID from JungleHelper, then you can use this special jump
-   * conditions: When the player get lantern from JungleHelper
-* "[SkinName] + _lantern_NB"
-   * conditions: When the player get lantern from JungleHelper and is no_backpack state
-
-Note: special-jump to other skin after, you used skin's info will all is from that other skin's config info
+<br>
 
 
 
@@ -126,6 +179,7 @@ Standard example of config file
 You can download them as examples for making skins: 
 * [Touhou-cirno](https://gamebanana.com/mods/316584)
 * [OshiroBoss But Badeline](https://gamebanana.com/mods/444994)
+
 
 
 More Miscellaneous
@@ -161,7 +215,7 @@ If some xml-undefined textures are misaligned:
 1. In the same folder as that texture, create a .meta.yaml file with the name of that texture
    * If the texture is "madeline.png", So create "madeline.meta.yaml" flie
 2. Write that texture information to the .meta.yaml file you create
-```
+```yaml
 X: [X offset value of texture in game]
 Y: [Y offset value of texture in game]
 Width: [pixel Width of texture]     # maybe, game need get its center point
