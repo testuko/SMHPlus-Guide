@@ -1,4 +1,4 @@
-Celeste Skin Mod Helper
+Celeste Skin Mod Helper Plus
 ==========================
 This is an [Everest](https://everestapi.github.io/) mod for [Celeste](http://www.celestegame.com/) 
 that provides tools and support for skin modding.
@@ -15,7 +15,7 @@ Features
 **For Players**:
 ![menu](docs/img/menu.png)
 
-Allows you to change the player skin or any other supported skin at any time, ingame, without restarting.
+SMH+ allows you to change the player skin or any other supported skin at any time, ingame, without restarting. <br>
 You can individually choose and combine textures from any supported skinmod.
 
 <br>
