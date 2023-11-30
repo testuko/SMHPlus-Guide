@@ -94,7 +94,7 @@ If the sprite ID doesn't match character_ID the game will crash.
 Conditional Player Sprites
 -----------------------------------
 You can add additional Character IDs for your skin that change your skin when specific conditions are met.<br>
-If a texture is missing from a conditional player skin, it is filled in from the default player skin.
+When a conditional player skin is used all texture information will come from that skin / character ID.
 
 These are the current conditional player sprites:
 * "[SkinName] + _NB" 
