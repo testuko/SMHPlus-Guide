@@ -87,7 +87,7 @@ Create a sprites.xml file into the `Graphics/` folder. Only use this sprites.xml
 ```
 Only include sprites that you want to reskin. This is very important.<br>
 The sprites.xml can also include sprites from protraits.xml.<br>
-If the Skin ID doesn't match character_ID the game will crash.
+If the sprite ID doesn't match character_ID the game will crash.
 <br><br>
 
 
