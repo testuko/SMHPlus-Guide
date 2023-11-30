@@ -47,7 +47,7 @@ This is the name of your skin that will appear in Mod Options. Remember to clean
 Character ID
 ---------------------------
 
-Every player skin needs a unique character ID.
+Every player skin needs an unique character ID.
 
 ```yaml
   Character_ID: "MySkin"
