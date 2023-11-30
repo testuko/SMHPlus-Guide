@@ -73,7 +73,7 @@ Sprites.xml
 SMH+ uses xml files to edit sprites. Visit [everest's wiki](https://github.com/EverestAPI/Resources/wiki/Reskinning-Entities#reskinning-entities-through-spritesxml) for a more comprehensive guide on xml files.
 
 
-Create a sprites.xml file into the `Graphics/` folder. Only use this sprites.xml to edit the custom character IDs that SMH+ provides. See `OtherSprite Path` for skinning other sprites.
+Create a sprites.xml file into the `Graphics/` folder. Only use this sprites.xml to edit the custom character IDs that SMH+ provides. See [OtherSprite Path](https://github.com/testuko/SMHPlus-Guide/blob/main/docs/guide/README.md#othersprite-path) for skinning other sprites.
 
 ```xml
   <!-- sprites.xml -->
@@ -226,7 +226,7 @@ General skins are used skin other entities than the player. They only neet 2 par
   OtherSprite_ExPath: [a path]        # Works the same way as OtherSprite_Path
 ```
 
-General skins work just like `OtherSprite Path`, except they use OtherSprite_ExPath.
+General skins work just like [OtherSprite Path](https://github.com/testuko/SMHPlus-Guide/blob/main/docs/guide/README.md#othersprite-path), except they use OtherSprite_ExPath.
 <br>
 <br>
 <br>
@@ -303,7 +303,7 @@ More Miscellaneous
 
 
 
-not translated yet 
+not edited yet 
 
 
 Troubleshooting
