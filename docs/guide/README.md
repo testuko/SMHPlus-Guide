@@ -86,7 +86,7 @@ Create a sprites.xml file into the `Graphics/` folder. Only use this sprites.xml
 </Sprites>
 ```
 Only include sprites that you want to reskin. This is very important.<br>
-The sprites.xml can also include sprites from protraits.xml.<br>
+The sprites.xml can also include sprites from portraits.xml.<br>
 If the sprite ID doesn't match character_ID the game will crash.
 <br><br>
 
@@ -213,7 +213,7 @@ SkinModHelper skins are CelesteNet compatible. The hashSeed is a unique value th
 
 
 # Creating a general skin
-General skins are used skin other entities than the player. They only need 2 parameters. 
+Use a general skin if your skinmod is not going to change the player skin. They only need 3 parameters. 
 
 
 ```yaml
