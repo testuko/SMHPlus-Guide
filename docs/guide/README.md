@@ -85,8 +85,7 @@ Create a sprites.xml file into the `Graphics/` folder. Only use this sprites.xml
   <MySkin copy="player" path="characters/AAA1459/MySkin1/" />
 </Sprites>
 ```
-Only include sprites that you want to reskin. This is very important.<br>
-The sprites.xml can also include sprites from portraits.xml.<br>
+Only edit sprites with custom Character IDs here. Other sprites should be edited in the [OtherSprite Path](https://github.com/testuko/SMHPlus-Guide/blob/main/docs/guide/README.md#othersprite-path) folder<br>
 If the sprite ID doesn't match character_ID the game will crash.
 <br><br>
 
@@ -146,7 +145,8 @@ These are the current conditional player sprites:
 OtherSprite Path
 ---
 In order to change other sprites when your skin mod is enabled, you can create a second sprites.xml file that gets applied when the specific skinmod gets loaded. Edit all other sprites here.
-This can also be used to reskin custom animations from other helpers. 
+This can also be used to reskin custom animations from other helpers.<br>
+You can also include a portraits.xml file in this directory.
 
 The sprite path is relative to the `Graphics/` folder.
 
