@@ -213,7 +213,7 @@ SkinModHelper skins are CelesteNet compatible. The hashSeed is a unique value th
 
 
 # Creating a general skin
-General skins are used skin other entities than the player. They only neet 2 parameters. 
+General skins are used skin other entities than the player. They only need 2 parameters. 
 
 
 ```yaml
