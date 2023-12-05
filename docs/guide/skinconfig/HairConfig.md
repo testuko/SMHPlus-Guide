@@ -4,7 +4,8 @@ HairConfig.yaml
 Here you can change hair related settings for your character.
 In fact, you can change the hair for any Sprite-ID specified in Sprites.xml, if it has hair.
 
-These settings are located in a new config file. Create the new config file at the path: "../Gameplay/[ID's rootPath]/skinConfig/HairConfig.yaml"
+These settings are located in a new config file. Create the new config file at the path: <br>
+`"../Gameplay/[ID's rootPath]/skinConfig/HairConfig.yaml"`
 
 Here is a skeleton of that new config file. 
 Each of the fields will be explained below.
