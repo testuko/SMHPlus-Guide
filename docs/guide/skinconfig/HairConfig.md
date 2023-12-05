@@ -21,7 +21,7 @@ Each of the fields will be explained below.
 HairLengths
 -----------------------------------
 You can change you character's hair length.
-```
+```yaml
   HairLengths:
   - Dashes: [use -1 to 32]     
       # use [-1] to change the feather trail length.
@@ -31,7 +31,7 @@ You can change you character's hair length.
 HairColors
 -----------------------------------
 You can change your character's hair color. SegmentsColor option is optional and can override the color for specific hair segments. (like the pattern option in hyperline)
-```
+```yaml
   HairColors:
   - Dashes: [use 0 to 32]
     Color: [use six digit RGB hex code]     # such as: ["9B3FB5"], that is badeline's 1-dash color
@@ -43,14 +43,14 @@ You can change your character's hair color. SegmentsColor option is optional and
 HairFlash
 -----------------------------------
 You can enable / disable the white flash that happens when your dash count changes.
-```
+```yaml
   HairFlash: false
 ```
 
 OutlineColor
 -----------------------------------
 You can change the outline color of the your character's **hair**.
-```
+```yaml
   OutlineColor: [use six digit RGB hex code]
 ```
 
