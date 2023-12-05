@@ -25,7 +25,7 @@ You can individually choose and combine textures from any supported skinmod.
 Reskin the game! No need to get frustrated with hardcoded assets. SMH+ adds support for:
 
 ```yaml
-* Separate hair and bang textures for all sprites that use hair.
+* Separate hair and bang textures for all sprites that have hair.
 * Custom hair length, color and texture customization.
 * Custom death particle for player and Theo crystal etc.  
 * Custom particles for feathers and boosters.
