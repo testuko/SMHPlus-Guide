@@ -3,7 +3,8 @@ CharacterConfig.yaml
 -----------------------------------
 You can use this file to set some special effects for your character.
 
-These settings are located in a new config file. Create the new config file at the path: "../Gameplay/[ID's rootPath]/skinConfig/CharacterConfig.yaml"
+These settings are located in a new config file. Create the new config file at the path: <br>
+`../Gameplay/[ID's rootPath]/skinConfig/CharacterConfig.yaml`
 
 Here is a skeleton of that new config file. 
 Each of the fields will be explained below.
