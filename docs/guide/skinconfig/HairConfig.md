@@ -35,8 +35,8 @@ You can change your character's hair color. SegmentsColor option is optional and
   HairColors:
   - Dashes: [use 0 to 32]
     Color: [use six digit RGB hex code]     # such as: ["9B3FB5"], that is badeline's 1-dash color
-	SegmentsColors: (optional)
-	- Segment: [Which segments of hair]     # use negative numbers to get reverse order
+        SegmentsColors: (optional)
+        - Segment: [Which segments of hair]     # use negative numbers to get reverse order
           Color: [use six digit RGB hex code]
 ```
 
