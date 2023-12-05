@@ -1,10 +1,10 @@
 
 HairConfig.yaml
 -----------------------------------
-If you want to set hair color etc for specified-ID in Sprites.xml, then you can come here
+Here you can change hair related settings for your character.
+In fact, you can change the hair for any Sprite-ID specified in Sprites.xml, if it has hair.
 
-The content here involves a new config, if you want use them, 
-you need to create a new config file for that object-ID, be like: "../Gameplay/[IDself's rootPath]/skinConfig/HairConfig.yaml"
+These settings are located in a new config file. Create the new config file at the path: "../Gameplay/[ID's rootPath]/skinConfig/HairConfig.yaml"
 
 Here is a skeleton of that new config file. 
 Each of the fields will be explained below.
@@ -19,39 +19,36 @@ Each of the fields will be explained below.
 
 HairLengths
 -----------------------------------
-If you want object-ID's hair to be longer or shorter,
-Then you can use this:
+You can change you character's hair length.
 ```
   HairLengths:
   - Dashes: [use -1 to 32]     
-      # using [-1] mean apply this length to player in feather status
+      # use [-1] to change the feather trail length.
     Length: [use 1 to 99]
 ```
 
 HairColors
 -----------------------------------
-If you want object-ID to get a new hair color, other than the default maddy's color, 
-Then you can use this:
+You can change your character's hair color. SegmentsColor option is optional and can override the color for specific hair segments. (like the pattern option in hyperline)
 ```
   HairColors:
   - Dashes: [use 0 to 32]
-    Color: [use six digit RGB hex code]     # such as: ["9B3FB5"], that is baddy's 1-dash color
-	SegmentsColors:
-	- Segment: [Which segments of hair]     # use [negative numbers] to get reverse order
+    Color: [use six digit RGB hex code]     # such as: ["9B3FB5"], that is badeline's 1-dash color
+	SegmentsColors: (optional)
+	- Segment: [Which segments of hair]     # use negative numbers to get reverse order
           Color: [use six digit RGB hex code]
 ```
 
 HairFlash
 -----------------------------------
-player's hair will flashing when player's dashes be used or refill.
-but if you not want it will flashing, Then you can use this.
+You can enable / disable the white flash that happens when your dash count changes.
 ```
   HairFlash: false
 ```
 
 OutlineColor
 -----------------------------------
-If you want to recolor hair border of object-ID, so you can use this:
+You can change the outline color of the your character's **hair**.
 ```
   OutlineColor: [use six digit RGB hex code]
 ```
