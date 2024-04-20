@@ -1,58 +1,72 @@
+---
 
-HairConfig.yaml
------------------------------------
-Here you can change hair related settings for your character.
-In fact, you can change the hair for any Sprite-ID specified in Sprites.xml, if it has hair.
+## HairConfig.yaml
 
-These settings are located in a new config file. Create the new config file at the path: <br>
-`"../Gameplay/[ID's rootPath]/skinConfig/HairConfig.yaml"`
+---
 
-Here is a skeleton of that new config file. 
-Each of the fields will be explained below.
+If you need to customize hair color and related attributes for specified IDs in the Sprites.xml, follow these instructions.
+
+To utilize these configurations, you'll need to create a new configuration file for the object ID, structured as follows: "../Gameplay/[ID's root path]/skinConfig/HairConfig.yaml"
+
+Below is the template for this new config file.
+
 ```yaml
   HairLengths:
   - < HairLength >
   HairColors:
   - < HairColor >
   HairFlash: [true/false]
-  OutlineColor: [use six digit RGB hex code]
+  OutlineColor: [use six-digit RGB hex code]
 ```
 
-HairLengths
------------------------------------
-You can change you character's hair length.
-```yaml
+---
+
+### HairLengths
+
+If you wish to adjust the length of the hair for the object ID, use this configuration:
+
+```
   HairLengths:
   - Dashes: [use -1 to 32]     
-      # use [-1] to change the feather trail length.
+      # Using [-1] applies this length to the player in feather status
     Length: [use 1 to 99]
 ```
 
-HairColors
------------------------------------
-You can change your character's hair color. SegmentsColor option is optional and can override the color for specific hair segments. (like the pattern option in hyperline)
-```yaml
+---
+
+### HairColors
+
+To assign a new hair color to the object ID, different from Maddy's default color, follow this setup:
+
+```
   HairColors:
   - Dashes: [use 0 to 32]
-    Color: [use six digit RGB hex code]     # such as: ["9B3FB5"], that is badeline's 1-dash color
-        SegmentsColors: (optional)
-        - Segment: [Which segments of hair]     # use negative numbers to get reverse order
-          Color: [use six digit RGB hex code]
+    Color: [use six-digit RGB hex code]     # Example: "9B3FB5", which represents Baddy's 1-dash color
+    SegmentsColors:
+    - Segment: [Specify hair segments]     # Use negative numbers for reverse order
+      Color: [use six-digit RGB hex code]
 ```
 
-HairFlash
------------------------------------
-You can enable / disable the white flash that happens when your dash count changes.
-```yaml
+---
+
+### HairFlash
+
+By default, the player's hair flashes when dashes are used or refilled. If you wish to disable this feature, use:
+
+```
   HairFlash: false
 ```
 
-OutlineColor
------------------------------------
-You can change the outline color of the your character's **hair**.
-```yaml
-  OutlineColor: [use six digit RGB hex code]
+---
+
+### OutlineColor
+
+If you need to recolor the hair border of the object ID, use this configuration:
+
+```
+  OutlineColor: [use six-digit RGB hex code]
 ```
 
+[Previous Page](/docs/guide/README.md#more-miscellaneous)
 
-[previous page](/docs/guide/README.md#more-miscellaneous)
+---
